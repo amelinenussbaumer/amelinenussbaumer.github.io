@@ -42,4 +42,15 @@ a.icon > strong {margin-left:.25rem}
 .carousel-cell {width:100%}
 // Flickity - end
 
- 
+ // Raf addition
+.card:hover{
+    transform: scale(1.05);
+    transition-property: background-color,border-color,color,fill,stroke,opacity,box-shadow,transform;
+    transition: all .2s ease-in-out;
+}
+
+article:hover{
+    transform: scale(1.05);
+    transition-property: background-color,border-color,color,fill,stroke,opacity,box-shadow,transform;
+    transition: all .2s ease-in-out;
+}
