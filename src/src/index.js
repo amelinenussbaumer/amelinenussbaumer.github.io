@@ -2,6 +2,7 @@ require('./styles.scss');
 
 var Flickity = require('flickity');
 require('flickity-imagesloaded');
+//require('flickity-bg-lazyload');
 
 var $carousels = new Array();
 
@@ -11,6 +12,7 @@ var rootEl = document.documentElement;
 var $modals = getAll('.modal');
 var $modalTriggers = getAll('.modal-trigger');
 var $modalCloses = getAll('.modal-card-head .delete, .modal-card-foot .button');
+var $caption = getAll('.caption');
 
 if ($modalTriggers.length > 0) {
     $modalTriggers.forEach(function ($el) {
@@ -38,14 +40,18 @@ function openModal(target) {
     if (document.querySelector('#' + carouselId)) {
         // Initialize each carousel one time only
         if ($carousels.length === 0) {
-            $carousels.push(initCarousel(carouselId));
+            var $car = initCarousel(carouselId)
         }
         else {
             var index = $carousels.findIndex(c => c.element.id == carouselId);
             if (index === -1) {
-                $carousels.push(initCarousel(carouselId));
+                var $car = initCarousel(carouselId)
             }
         }
+        $car.on( 'select.flickity', function() {
+            $caption.text( $car.data('flickity').selectedElement.alt )
+        });
+        $carousels.push($car);
     }
 }
 
@@ -60,8 +66,10 @@ function closeModals() {
 
 function initCarousel(id) {
     return new Flickity('#' + id, {
-        imagesLoaded: true,
-        adaptiveHeight: true // https://github.com/metafizzy/flickity/issues/11
+        //imagesLoaded: true,
+        //LazyLoad: true
+        //bgLazyLoad: true
+        //adaptiveHeight: true // https://github.com/metafizzy/flickity/issues/11
     });
 }
 
