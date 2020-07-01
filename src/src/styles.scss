@@ -65,13 +65,19 @@ article:hover{
 }
 
 #profile-img{
-    border: 5px solid white;
+    border: 3px solid white;
 }
 
 @media screen and (min-width: 960px){
     .modal-content, .modal-card {
         margin: 0 auto;
         max-height: calc(100vh - 40px);
-        width: 100px;
+        width: 1000px;
     }
 }
+
+.soft-log{
+    padding-right: 3px;
+    height: 24px;
+}
+

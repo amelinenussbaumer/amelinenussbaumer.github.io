@@ -48,9 +48,9 @@ function openModal(target) {
                 var $car = initCarousel(carouselId)
             }
         }
-        $car.on( 'select.flickity', function() {
+       /* $car.on( 'select.flickity', function() {
             $caption.text( $car.data('flickity').selectedElement.alt )
-        });
+        });*/
         $carousels.push($car);
     }
 }
@@ -66,10 +66,10 @@ function closeModals() {
 
 function initCarousel(id) {
     return new Flickity('#' + id, {
-        //imagesLoaded: true,
+        imagesLoaded: true,
         //LazyLoad: true
         //bgLazyLoad: true
-        //adaptiveHeight: true // https://github.com/metafizzy/flickity/issues/11
+        adaptiveHeight: true // https://github.com/metafizzy/flickity/issues/11
     });
 }
 
