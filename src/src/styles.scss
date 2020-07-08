@@ -6,10 +6,15 @@
 // Import Lato Google Font
 @import url('https://fonts.googleapis.com/css?family=Lato:300,400,700,900');
 
+
+
+
 // Update Bulma's global variables
 $family-sans-serif: "Lato", sans-serif;
 $widescreen-enabled: false;
 $fullhd-enabled: false;
+
+
 
 // More theme colors could be added here...
 $primary: #454545;
@@ -28,6 +33,8 @@ $link: hsl(171, 100%, 41%);
 a.icon > strong {margin-left:.25rem}
 .modal-card-body div.content {margin:$margin-default}
 
+
+
 // import everything - alternatively import just what you need: https://bulma.io/documentation/overview/modular/
 @import "~bulma/bulma"; 
 
@@ -43,7 +50,11 @@ a.icon > strong {margin-left:.25rem}
 // Flickity - end
 
  // Raf addition
-.card:hover{
+p:not(:last-of-type) {
+    margin-bottom: 1rem !important;
+}
+
+ .card:hover{
     /*transform: scale(1.05);
     transition-property: background-color,border-color,color,fill,stroke,opacity,box-shadow,transform;
     transition: all .2s ease-in-out;
@@ -79,5 +90,9 @@ article:hover{
 .soft-log{
     padding-right: 3px;
     height: 24px;
+}
+
+.title.is-4{
+    margin-bottom: .5rem !important;
 }
 
