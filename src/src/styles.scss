@@ -25,7 +25,7 @@ $margin-default: map-get($spaces, "2") map-get($spaces, "0");
 
 // Update some of Bulma's component & color variables
 $footer-padding: 3rem 1.5rem;
-$link: hsl(171, 100%, 41%);
+$link: #729460; //#cddcc5; // hsl(171, 100%, 41%);
 
 // Custom Styles
 .card-gap {margin-top:1.75rem}
@@ -60,7 +60,9 @@ p:not(:last-of-type) {
     transition: all .2s ease-in-out;
     background: #f5f5f5;*/
 }
-
+.hero-body{
+    text-shadow: 2px 2px 4px #000000;
+}
 article:hover{
     transform: scale(1.05);
     transition-property: background-color,border-color,color,fill,stroke,opacity,box-shadow,transform;
@@ -73,19 +75,21 @@ article:hover{
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
+    background-attachment: fixed;
 }
 
 #profile-img{
     border: 3px solid white;
+    box-shadow: 2px 2px 4px #000000;
 }
 
-@media screen and (min-width: 960px){
+/*@media screen and (min-width: 960px){
     .modal-content, .modal-card {
         margin: 0 auto;
         max-height: calc(100vh - 40px);
         width: 1000px;
     }
-}
+}*/
 
 .soft-log{
     padding-right: 3px;
@@ -96,3 +100,16 @@ article:hover{
     margin-bottom: .5rem !important;
 }
 
+.taga {
+    margin-right: .5rem;
+}
+
+.fa-ul > li{
+    margin-top: .25em;
+}
+
+.fa-li > .fas {
+    color: #729460;
+}
+
+  
