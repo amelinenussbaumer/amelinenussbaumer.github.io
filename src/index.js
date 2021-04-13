@@ -4,6 +4,11 @@ var Flickity = require('flickity');
 require('flickity-imagesloaded');
 //require('flickity-bg-lazyload');
 
+import '@fortawesome/fontawesome-free/js/fontawesome'
+import '@fortawesome/fontawesome-free/js/solid'
+import '@fortawesome/fontawesome-free/js/regular'
+import '@fortawesome/fontawesome-free/js/brands'
+
 var $carousels = new Array();
 
 // Modals

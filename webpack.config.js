@@ -12,12 +12,12 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.js'
+    filename: 'bundle.js',
   },
   module: {
     rules: [{
-      test: /\.scss$/,
-      use: [
+        test: /\.scss$/,
+        use: [
           MiniCssExtractPlugin.loader,
           {
             loader: 'css-loader?url=false'
@@ -28,9 +28,14 @@ module.exports = {
               sourceMap: true,
               // options...
             }
-          }
+          },
         ]
-    }]
+      },
+      {
+        test: /\.(html)$/,
+        use: 'html-loader'
+      }
+    ]
   },
   plugins: [
     new MiniCssExtractPlugin({
