@@ -2,14 +2,12 @@ const path = require('path');
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const TerserJSPlugin = require('terser-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 
 module.exports = {
   entry: './src/index.js',
   // https://webpack.js.org/plugins/mini-css-extract-plugin/#minimizing-for-production
-  optimization: {
-    minimizer: [new TerserJSPlugin({}), new OptimizeCSSAssetsPlugin({})],
-  },
+  watch: true,
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',
@@ -20,7 +18,7 @@ module.exports = {
         use: [
           MiniCssExtractPlugin.loader,
           {
-            loader: 'css-loader?url=false'
+            loader: 'css-loader'
           },
           {
             loader: 'sass-loader',
@@ -36,6 +34,14 @@ module.exports = {
         use: 'html-loader'
       }
     ]
+  },
+  optimization: {
+    minimizer: [
+      // For webpack@5 you can use the `...` syntax to extend existing minimizers (i.e. `terser-webpack-plugin`), uncomment the next line
+      // `...`,
+      new CssMinimizerPlugin(),
+      new TerserJSPlugin({})
+    ],
   },
   plugins: [
     new MiniCssExtractPlugin({
