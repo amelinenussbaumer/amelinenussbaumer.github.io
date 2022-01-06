@@ -71,10 +71,21 @@ article:hover{
     box-shadow: 0 0.5em 1em -0.125em rgba(10,10,10,.1), 0 0 0 1px rgba(10,10,10,.02);
 }
 #bkg-img{
+    position: relative;
+}
+#bkg-img::before{
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
     background-image: url('https://github.com/amelinenussbaumer/amelinenussbaumer.github.io/blob/master/assets/img/Background3_c.jpg?raw=true');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
+    filter: opacity(65%);
+}
+#bkg-img-inside{
+    position: relative;
 }
 
 #profile-img{
