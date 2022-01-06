@@ -4,7 +4,7 @@
  */
 
 /*!
- * Flickity v2.2.2
+ * Flickity v2.3.0
  * Touch, responsive, flickable carousels
  *
  * Licensed GPLv3 for open source use
@@ -15,18 +15,18 @@
  */
 
 /*!
- * Font Awesome Free 5.15.3 by @fontawesome - https://fontawesome.com
+ * Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com
  * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
  */
 
 /*!
- * Unidragger v2.3.1
+ * Unidragger v2.4.0
  * Draggable base class
  * MIT license
  */
 
 /*!
- * Unipointer v2.3.0
+ * Unipointer v2.4.0
  * base class for doing one thing with pointer event
  * MIT license
  */
