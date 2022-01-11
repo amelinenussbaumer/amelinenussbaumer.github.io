@@ -6,7 +6,7 @@
   "author": "Améline Nussbaumer",
   "license": "MIT",
   "scripts": {
-    "start": "webpack serve --open  --mode development",
+    "serve": "webpack serve --open  --mode development",
     "build": "webpack --mode production",
     "deploy": "gh-pages -d dist",
     "publish": "npm run build && npm run deploy"

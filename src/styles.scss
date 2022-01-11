@@ -50,7 +50,7 @@ a.icon > strong {margin-left:.25rem}
 // Flickity - end
 
  // Raf addition
-p:not(:last-of-type) {
+p {
     margin-bottom: 1rem !important;
 }
 
@@ -108,6 +108,11 @@ article:hover{
 
 .title.is-4{
     margin-bottom: .5rem !important;
+}
+
+.title.is-5{
+    margin-bottom: 1rem !important;
+    margin-top: 1rem!important;
 }
 
 .taga {
