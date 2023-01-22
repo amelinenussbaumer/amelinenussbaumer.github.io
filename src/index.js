@@ -53,9 +53,9 @@ function openModal(target) {
                 var $car = initCarousel(carouselId)
             }
         }
-       /* $car.on( 'select.flickity', function() {
-            $caption.text( $car.data('flickity').selectedElement.alt )
-        });*/
+        /* $car.on( 'select.flickity', function() {
+             $caption.text( $car.data('flickity').selectedElement.alt )
+         });*/
         $carousels.push($car);
     }
 }

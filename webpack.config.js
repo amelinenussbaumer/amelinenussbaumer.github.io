@@ -14,25 +14,25 @@ module.exports = {
   },
   module: {
     rules: [{
-        test: /\.scss$/,
-        use: [
-          MiniCssExtractPlugin.loader,
-          {
-            loader: 'css-loader'
-          },
-          {
-            loader: 'sass-loader',
-            options: {
-              sourceMap: true,
-              // options...
-            }
-          },
-        ]
-      },
-      {
-        test: /\.(html)$/,
-        use: 'html-loader'
-      }
+      test: /\.scss$/,
+      use: [
+        MiniCssExtractPlugin.loader,
+        {
+          loader: 'css-loader'
+        },
+        {
+          loader: 'sass-loader',
+          options: {
+            sourceMap: true,
+            // options...
+          }
+        },
+      ]
+    },
+    {
+      test: /\.(html)$/,
+      use: 'html-loader'
+    }
     ]
   },
   optimization: {
