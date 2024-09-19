@@ -29,3 +29,9 @@ jobs:
         with:
           name: build
           path: ./dist # Path to the directory containing the build artifacts
+
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: gh-pages # The branch the action should deploy to.
+          folder: dist # The folder the action should deploy.
